@@ -96,8 +96,8 @@ Rails.application.routes.draw do
   resources :maintenance
 
   namespace :api do
-    # Internal API for Angular app
-    namespace :internal do
+    # External API for third parties
+    namespace :v1 do
       resource :health
 
       # Admin routes
@@ -186,9 +186,8 @@ Rails.application.routes.draw do
       end
     end
 
-    # External API for third parties
-    namespace :v1 do
-      resource :sample
+    # Internal API for Angular
+    namespace :internal do
     end
   end
 end

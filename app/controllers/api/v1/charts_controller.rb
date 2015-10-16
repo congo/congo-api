@@ -1,5 +1,5 @@
-class Api::Internal::ChartsController < Api::ApiController
-  protect_from_forgery
+class Api::V1::ChartsController < Api::ApiController
+  #protect_from_forgery
 
   before_filter :ensure_user!
   before_filter :ensure_account!

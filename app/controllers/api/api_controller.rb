@@ -1,4 +1,5 @@
 class Api::ApiController < ApplicationController
+  include ActionController::Serialization
   before_filter :check_maintenance
 
   def check_maintenance

@@ -1,8 +1,8 @@
-class Api::Internal::NotificationsController < Api::ApiController
+class Api::V1::NotificationsController < Api::ApiController
   before_filter :ensure_user!
   before_filter :ensure_account!
 
-  protect_from_forgery
+  #protect_from_forgery
 
   def index
     since = params[:since] ? Time.parse(params[:since]) : nil
