@@ -1,7 +1,7 @@
-Congo
+Congo-API
 =====
 
-GroupHub front-end. Allows brokers to help group admins and employees manage
+GroupHub backend. Allows third-party apps to help brokers to help group admins and employees manage
 their benefit plans.
 
 Getting started
