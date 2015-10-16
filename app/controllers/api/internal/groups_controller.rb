@@ -1,7 +1,7 @@
-class Api::V1::GroupsController < Api::ApiController
+class Api::Internal::GroupsController < Api::ApiController
   include UsersHelper
 
-  #protect_from_forgery
+  protect_from_forgery
 
   before_filter :ensure_user!
   before_filter :ensure_account!, only: [:update, :destroy]
@@ -58,7 +58,7 @@ class Api::V1::GroupsController < Api::ApiController
     unless account
       # TODO: Test this
       #account = Account.create!(plan_name:'group')
-
+      
 
       error_response('A matching account could not be found.')
       return

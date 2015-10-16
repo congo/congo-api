@@ -1,4 +1,4 @@
-class Api::V1::Admin::CarriersController < Api::ApiController
+class Api::Internal::Admin::CarriersController < Api::ApiController
   protect_from_forgery
 
   before_filter :ensure_admin!, except: :index

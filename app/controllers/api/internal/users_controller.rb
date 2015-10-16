@@ -1,11 +1,11 @@
-class Api::V1::UsersController < Api::ApiController
+class Api::Internal::UsersController < Api::ApiController
   include ApplicationHelper
   include UsersHelper
   include CustomerCreatable
   include BrokerCreatable
   include GroupAdminCreatable
 
-  #protect_from_forgery
+  protect_from_forgery
 
   def create
     first_name = params[:first_name]

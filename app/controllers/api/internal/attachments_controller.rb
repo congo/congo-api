@@ -1,7 +1,7 @@
-class Api::V1::AttachmentsController < Api::ApiController
+class Api::Internal::AttachmentsController < Api::ApiController
   include ApplicationHelper
 
-  #protect_from_forgery
+  protect_from_forgery
 
   before_filter :ensure_user!
   before_filter :ensure_account!

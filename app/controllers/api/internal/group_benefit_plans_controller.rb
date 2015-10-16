@@ -1,5 +1,5 @@
 class Api::Internal::GroupBenefitPlansController < Api::ApiController
-  #protect_from_forgery
+  protect_from_forgery
 
   before_filter :ensure_user!
   before_filter :ensure_account!

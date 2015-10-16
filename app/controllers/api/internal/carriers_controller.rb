@@ -1,5 +1,5 @@
-class Api::V1::CarriersController < Api::ApiController
-  #protect_from_forgery
+class Api::Internal::CarriersController < Api::ApiController
+  protect_from_forgery
 
   before_filter :ensure_user!
   before_filter :ensure_account!
