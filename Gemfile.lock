@@ -16,6 +16,15 @@ GIT
       oauth2 (~> 0.9)
 
 GIT
+  remote: git://github.com/rails-api/rails-api.git
+  revision: f43189a9d123f6b2638de4a732ea9105a5c46aa4
+  branch: master
+  specs:
+    rails-api (0.4.0)
+      actionpack (>= 3.2.11)
+      railties (>= 3.2.11)
+
+GIT
   remote: git://github.com/rails/coffee-rails.git
   revision: c05fb725613d96ce969c30a11e7b613e90f9e5e8
   specs:
@@ -377,6 +386,7 @@ DEPENDENCIES
   rack-livereload
   railroady
   rails (~> 4.2)
+  rails-api!
   rails-erd
   redis-namespace
   remote_syslog_logger
