@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # gem 'rails', github: 'rails/rails', branch: '4-2-stable'
 gem 'rails', '~> 4.2'
 gem 'rails-api', github: 'rails-api/rails-api', branch: 'master'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 
 gem 'pg', '~>0.18'
 gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: '2.x'

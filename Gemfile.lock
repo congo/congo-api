@@ -16,6 +16,16 @@ GIT
       oauth2 (~> 0.9)
 
 GIT
+  remote: git://github.com/rails-api/active_model_serializers.git
+  revision: 737784c9b702ea47932e8e6a1812d445f115bf7d
+  branch: master
+  specs:
+    active_model_serializers (0.10.0.rc3)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
+
+GIT
   remote: git://github.com/rails-api/rails-api.git
   revision: f43189a9d123f6b2638de4a732ea9105a5c46aa4
   branch: master
@@ -355,6 +365,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers!
   aws-s3!
   bcrypt (~> 3.1.7)
   capybara
