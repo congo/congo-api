@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150918183124) do
+ActiveRecord::Schema.define(version: 20151022162905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -145,6 +145,44 @@ ActiveRecord::Schema.define(version: 20150918183124) do
 
   add_index "carriers", ["deleted_at"], name: "index_carriers_on_deleted_at", using: :btree
 
+  create_table "dependents", force: :cascade do |t|
+    t.integer  "application_id"
+    t.integer  "carrier_id"
+    t.string   "master_policy_number"
+    t.integer  "group_id"
+    t.integer  "member_id"
+    t.string   "enrollment_reference_number"
+    t.date     "enrollment_date"
+    t.integer  "subscriber_number"
+    t.string   "dependent_type"
+    t.boolean  "dependent_coverage_refusal"
+    t.integer  "dependent_coverage_refusal_id"
+    t.string   "dependent_first_name"
+    t.string   "dependent_middle_name"
+    t.string   "dependent_last_name"
+    t.string   "dependent_ssn"
+    t.string   "dependent_address_1"
+    t.string   "dependent_address_2"
+    t.string   "dependent_city"
+    t.string   "dependent_state"
+    t.integer  "dependent_zip"
+    t.string   "dependent_home_phone"
+    t.string   "dependent_date_of_birth"
+    t.integer  "dependent_gender"
+    t.boolean  "dependent_disabled"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "enrollments", force: :cascade do |t|
+    t.string   "reference_number"
+    t.integer  "account_id"
+    t.text     "properties_data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "deleted_at"
+  end
+
   create_table "features", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -270,6 +308,20 @@ ActiveRecord::Schema.define(version: 20150918183124) do
   end
 
   add_index "roles", ["deleted_at"], name: "index_roles_on_deleted_at", using: :btree
+
+  create_table "subscriber_dependents", force: :cascade do |t|
+    t.integer  "application_id"
+    t.integer  "carrier_id"
+    t.string   "master_policy_number"
+    t.integer  "group_id"
+    t.integer  "member_id"
+    t.string   "enrollment_reference_number"
+    t.date     "enrollment_date"
+    t.integer  "subscriber_number"
+    t.string   "dependent_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tokens", force: :cascade do |t|
     t.string   "name"

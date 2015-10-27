@@ -186,10 +186,15 @@ Rails.application.routes.draw do
       end
     end
 
-    # External API for third parties
-    namespace :v1 do
-      resource :sample
+    # Public API for third parties
+    namespace :v1, :defaults => {:format => :json} do
+      get     "/enrollments",     to: "enrollments#index"
+      post    "/enrollments",     to: "enrollments#create"
+      get     "/enrollments/:id", to: "enrollments#show"
+      put     "/enrollments/:id", to: "enrollments#update"
+      delete  "/enrollments/:id", to: "enrollments#destroy"
     end
+
   end
 end
 

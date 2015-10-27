@@ -1,4 +1,4 @@
-class Api::ApiController < ApplicationController
+class Api::ApiController < ::ApplicationController
   before_filter :check_maintenance
 
   def check_maintenance

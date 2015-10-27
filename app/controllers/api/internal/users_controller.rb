@@ -1,4 +1,4 @@
-class Api::Internal::UsersController < Api::ApiController
+class Api::Internal::UsersController < ::Api::ApiController
   include ApplicationHelper
   include UsersHelper
   include CustomerCreatable
