@@ -177,7 +177,7 @@ ActiveRecord::Schema.define(version: 20151022162905) do
   create_table "enrollments", force: :cascade do |t|
     t.string   "reference_number"
     t.integer  "account_id"
-    t.text     "properties_data"
+    t.json     "properties_data"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"

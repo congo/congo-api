@@ -6,7 +6,7 @@ class CreateEnrollments < ActiveRecord::Migration
 
       t.integer :account_id
 
-      t.text :properties_data
+      t.json :properties_data
 
       t.timestamp :created_at
       t.timestamp :updated_at

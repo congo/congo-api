@@ -5,7 +5,7 @@
 #  id               :integer          not null, primary key
 #  reference_number :string
 #  account_id       :integer
-#  properties_data  :text
+#  properties_data  :json
 #  created_at       :datetime
 #  updated_at       :datetime
 #  deleted_at       :datetime

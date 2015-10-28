@@ -9,8 +9,8 @@ class Api::V1::EnrollmentsController < ::ApplicationController
     # Search
     @enrollments = @enrollments.search(params[:q]) if params[:q]
 
-    # Filter for relationship
-    @enrollments = @enrollments.relationship(params[:relationship]) if params[:relationship]
+    # Filter for group
+    #@enrollments = @enrollments.relationship(params[:group]) if params[:group]
 
     # Order by
     @enrollments = @enrollments.order(params[:order].gsub(':', ' ')) if params[:order]
@@ -29,7 +29,7 @@ class Api::V1::EnrollmentsController < ::ApplicationController
   # GET /enrollments/1.json
   def show
     if(@enrollment.present?)
-      render json: @enrollment if stale?(@enrollment)
+      render json: @enrollment.properties_data if stale?(@enrollment)
     else
       render json: {}, status: :not_found
     end
@@ -40,7 +40,7 @@ class Api::V1::EnrollmentsController < ::ApplicationController
   def create
 
     @enrollment = Enrollment.new(properties_data: enrollment_properties_params)
-    debugger
+    #debugger
     #@enrollment = Enrollment.new()
     #render json: request.raw_post(), status: :created
 
