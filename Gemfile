@@ -26,7 +26,11 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'bcrypt', '~> 3.1.7'
 
+# for soft delete
 gem 'paranoia', '~> 2.0'
+
+# for pagination of results
+gem 'kaminari'
 
 # For running the server.
 gem 'shoryuken'
