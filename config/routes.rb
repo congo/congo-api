@@ -190,9 +190,9 @@ Rails.application.routes.draw do
     namespace :v1, :defaults => {:format => :json} do
       get     "/enrollment",     to: "enrollments#index"
       post    "/enrollment",     to: "enrollments#create"
-      get     "/enrollment/:id", to: "enrollments#show"
-      put     "/enrollment/:id", to: "enrollments#update"
-      delete  "/enrollment/:id", to: "enrollments#destroy"
+      get     "/enrollment/:reference_number", to: "enrollments#show"
+      put     "/enrollment/:reference_number", to: "enrollments#update"
+      delete  "/enrollment/:reference_number", to: "enrollments#destroy"
     end
 
   end

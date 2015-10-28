@@ -1,8 +1,9 @@
 class Api::V1::EnrollmentsController < ::ApplicationController
+  include Swagger::Blocks
   before_action :set_enrollment, only: [:show, :update, :destroy]
 
-  # GET /enrollments
-  # GET /enrollments.json
+  # GET /enrollment
+  # GET /enrollment.json
   def index
     @enrollments = Enrollment.all
 
@@ -25,8 +26,8 @@ class Api::V1::EnrollmentsController < ::ApplicationController
     render json: @enrollments if stale?(etag: @enrollments.all, last_modified: @enrollments.maximum(:updated_at))
   end
 
-  # GET /enrollments/1
-  # GET /enrollments/1.json
+  # GET /enrollment/:reference_number
+  # GET /enrollment/:reference_number.json
   def show
     if(@enrollment.present?)
       render json: @enrollment.properties_data if stale?(@enrollment)
@@ -35,8 +36,8 @@ class Api::V1::EnrollmentsController < ::ApplicationController
     end
   end
 
-  # POST /enrollments
-  # POST /enrollments.json
+  # POST /enrollment
+  # POST /enrollment.json
   def create
 
     @enrollment = Enrollment.new(properties_data: enrollment_properties_params)
@@ -45,25 +46,25 @@ class Api::V1::EnrollmentsController < ::ApplicationController
     #render json: request.raw_post(), status: :created
 
     if @enrollment.save
-      render json: @enrollment, status: :created
+      render json: {:reference_number => @enrollment.reference_number}, status: :created
     else
       render json: @enrollment.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /enrollments/1
-  # PATCH/PUT /enrollments/1.json
+  # PATCH/PUT /enrollment/:reference_number
+  # PATCH/PUT /enrollment/:reference_number.json
   def update
     #debugger
-    if @enrollment.update(enrollment_params)
+    if @enrollment.update(update_params)
       head :no_content
     else
       render json: @enrollment.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /enrollments/1
-  # DELETE /enrollments/1.json
+  # DELETE /enrollment/:reference_number
+  # DELETE /enrollment/:reference_number.json
   def destroy
     @enrollment.destroy
 
@@ -73,11 +74,11 @@ class Api::V1::EnrollmentsController < ::ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_enrollment
-      @enrollment = Enrollment.find_by_id(params[:id])
+      @enrollment = Enrollment.find_by(reference_number: params[:reference_number])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def enrollment_params
+    def update_params
       #json_data = request.raw_post()
       #params.require(:reference_number).permit(:name, :email, :twitter)
       params.permit(:dependents)
