@@ -10,15 +10,19 @@
 #  updated_at       :datetime
 #  deleted_at       :datetime
 #
+# Indexes
+#
+#  index_enrollments_on_deleted_at        (deleted_at)
+#  index_enrollments_on_reference_number  (reference_number)
+#
 
 class Enrollment < ActiveRecord::Base
-  #include Propertied
 
   acts_as_paranoid
   before_save :populate_reference_number
 
   def populate_reference_number
-    self.reference_number ||= "999999999" #ThirtySix.generate
+    self.reference_number ||= ThirtySix.generate
   end
 
 

@@ -1,8 +1,9 @@
 class CreateEnrollments < ActiveRecord::Migration
   def change
     create_table :enrollments do |t|
-      # This gets sent to PokitDok
+      # This Reference ID gets sent to PokitDok
       t.string :reference_number
+      t.index :reference_number
 
       t.integer :account_id
 
@@ -11,6 +12,7 @@ class CreateEnrollments < ActiveRecord::Migration
       t.timestamp :created_at
       t.timestamp :updated_at
       t.timestamp :deleted_at
+      t.index :deleted_at
     end
   end
 end
