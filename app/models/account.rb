@@ -1,3 +1,28 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id              :integer          not null, primary key
+#  name            :string
+#  slug            :string
+#  tagline         :string
+#  plan_name       :string
+#  properties_data :text
+#  card_number     :string
+#  month           :string
+#  year            :string
+#  cvc             :string
+#  billing_start   :datetime
+#  billing_day     :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  deleted_at      :datetime
+#
+# Indexes
+#
+#  index_accounts_on_deleted_at  (deleted_at)
+#
+
 require "#{Rails.root}/lib/sluggerizer"
 
 class Account < ActiveRecord::Base

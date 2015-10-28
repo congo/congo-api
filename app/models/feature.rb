@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: features
+#
+#  id                :integer          not null, primary key
+#  name              :string
+#  description       :text
+#  enabled_for_all   :boolean
+#  account_slug_data :text
+#  created_at        :datetime
+#  updated_at        :datetime
+#  deleted_at        :datetime
+#
+# Indexes
+#
+#  index_features_on_deleted_at  (deleted_at)
+#
+
 class Feature < ActiveRecord::Base
   acts_as_paranoid
 

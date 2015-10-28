@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: notifications
+#
+#  id           :integer          not null, primary key
+#  account_id   :integer
+#  role_id      :integer
+#  subject_kind :string
+#  subject_id   :integer
+#  title        :string
+#  description  :text
+#  created_at   :datetime
+#  updated_at   :datetime
+#  deleted_at   :datetime
+#  read_at      :datetime
+#
+# Indexes
+#
+#  index_notifications_on_deleted_at  (deleted_at)
+#  index_notifications_on_read_at     (read_at)
+#
+
 class Notification < ActiveRecord::Base
   acts_as_paranoid
 

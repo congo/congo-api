@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                 :integer          not null, primary key
+#  first_name         :string
+#  last_name          :string
+#  email              :string
+#  encrypted_password :string
+#  password_token     :string
+#  properties_data    :text
+#  invitation_id      :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#  deleted_at         :datetime
+#  phone              :string
+#
+# Indexes
+#
+#  index_users_on_deleted_at  (deleted_at)
+#
+
 require 'spec_helper'
 
 describe User do

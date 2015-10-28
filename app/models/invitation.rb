@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: invitations
+#
+#  id          :integer          not null, primary key
+#  account_id  :integer
+#  uuid        :string
+#  description :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#  deleted_at  :datetime
+#
+# Indexes
+#
+#  index_invitations_on_deleted_at  (deleted_at)
+#
+
 class Invitation < ActiveRecord::Base
   acts_as_paranoid
 

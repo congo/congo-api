@@ -1,3 +1,22 @@
+# == Schema Information
+#
+# Table name: roles
+#
+#  id            :integer          not null, primary key
+#  account_id    :integer
+#  user_id       :integer
+#  name          :string
+#  english_name  :string
+#  invitation_id :integer
+#  created_at    :datetime
+#  updated_at    :datetime
+#  deleted_at    :datetime
+#
+# Indexes
+#
+#  index_roles_on_deleted_at  (deleted_at)
+#
+
 class Role < ActiveRecord::Base
   acts_as_paranoid
 
