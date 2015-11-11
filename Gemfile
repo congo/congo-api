@@ -118,5 +118,5 @@ group :development, :test do
 end
 
 #ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.3'
-raise 'Ruby version must be 2.2 or greater' unless  RUBY_VERSION.to_f >= 2.2
+#raise 'Ruby version must be 2.2 or greater' unless  RUBY_VERSION.to_f >= 2.2
 
