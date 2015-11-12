@@ -42,7 +42,7 @@ production:
   url: <%= ENV['DATABASE_URL'] %>
 <% else %>
 # Setup for RDS
-production:
+production: &production
   adapter: postgresql
   encoding: unicode
   database: <%= ENV['RDS_DB_NAME'] %>
@@ -50,5 +50,8 @@ production:
   password: <%= ENV['RDS_PASSWORD'] %>
   host: <%= ENV['RDS_HOSTNAME'] %>
   port: <%= ENV['RDS_PORT'] %>
+
+staging:
+  <<: *production
 <% end %>
 
