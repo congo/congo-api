@@ -414,6 +414,7 @@ DEPENDENCIES
   shoryuken
   spring
   spring-commands-rspec
+  sprockets (~> 3.0)
   sprockets-rails
   stripe
   swagger-blocks
