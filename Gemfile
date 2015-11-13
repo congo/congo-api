@@ -12,7 +12,7 @@ gem 'sprockets', '~> 3.0'
 
 gem 'redis-namespace'
 
-gem 'sass-rails', github: 'rails/sass-rails'
+gem 'sass-rails'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', github: 'rails/coffee-rails'
