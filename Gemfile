@@ -6,7 +6,8 @@ gem 'rails-api', github: 'rails-api/rails-api', branch: 'master'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 
 gem 'pg', '~>0.18'
-gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: '2.x'
+# gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: '2.x'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'redis-namespace'
 
@@ -117,6 +118,6 @@ group :development, :test do
   gem 'faker'
 end
 
-#ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.3'
-#raise 'Ruby version must be 2.2 or greater' unless  RUBY_VERSION.to_f >= 2.2
+# ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.3'
+# raise 'Ruby version must be 2.2 or greater' unless  RUBY_VERSION.to_f >= 2.2
 
