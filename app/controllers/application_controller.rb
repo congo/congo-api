@@ -1,6 +1,4 @@
-class ApplicationController < ActionController::API
-  include ActionController::Serialization
-  include ActionController::RequestForgeryProtection
+class ApplicationController < ActionController::Base
   include UsersHelper
 end
 

@@ -1,4 +1,4 @@
-class Api::V1::EnrollmentsController < ::ApplicationController
+class Api::V1::EnrollmentsController < ::Api::ApiExternalController
   include Swagger::Blocks
   before_action :set_enrollment, only: [:show, :update, :destroy]
 
