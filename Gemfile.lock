@@ -266,6 +266,11 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
@@ -399,6 +404,7 @@ DEPENDENCIES
   rails (~> 4.2)
   rails-api!
   rails-erd
+  rails_12factor
   redis-namespace
   remote_syslog_logger
   rspec-rails
@@ -409,7 +415,6 @@ DEPENDENCIES
   shoryuken
   spring
   spring-commands-rspec
-  sprockets (~> 3.0)
   sprockets-rails
   stripe
   swagger-blocks

@@ -8,7 +8,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers', br
 gem 'pg', '~>0.18'
 # gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: '2.x'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'sprockets', '~> 3.0'
+# gem 'sprockets', '~> 3.0'
 
 gem 'redis-namespace'
 
@@ -117,6 +117,10 @@ group :development, :test do
 
   gem 'spring-commands-rspec'
   gem 'faker'
+end
+
+group :production, :staging do
+  gem 'rails_12factor'
 end
 
 # ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.3'
