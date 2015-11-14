@@ -30,6 +30,9 @@ module Congo2
     # For throttling external API requests.
     config.middleware.use Rack::Defense
 
+    # For session flash
+    config.middleware.use ActionDispatch::Flash
+
     # Auto-require items in "lib"
     config.autoload_paths << Rails.root.join('lib')
 
