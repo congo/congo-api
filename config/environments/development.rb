@@ -31,7 +31,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
-
+ config.assets.digest = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
@@ -39,5 +39,5 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :letter_opener
 
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options.
-  config.middleware.use Rack::LiveReload
+ # config.middleware.use Rack::LiveReload
 end

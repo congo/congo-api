@@ -5,7 +5,10 @@ def angular_routes(routes)
 end
 
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   get '/index_v1', :to => redirect('/index_v1.html')
+
 
   angular_routes [
     # Home

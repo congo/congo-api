@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.2'
 gem 'rails-api', github: 'rails-api/rails-api', branch: 'master'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
-
+gem 'devise'
 gem 'pg', '~>0.18'
 # gem 'sprockets-rails', github: 'rails/sprockets-rails', branch: '2.x'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
@@ -20,6 +20,7 @@ gem 'coffee-rails', github: 'rails/coffee-rails'
 # JSON API docs
 gem 'swagger-blocks'
 
+gem 'activeadmin', github: 'activeadmin'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
