@@ -6107,14 +6107,19 @@ html.bg {
     #coming-soon.dark .social .ion span {
       color: #AEDCFF; }
   #coming-soon #cover-image {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 120%;
+    height: 100%;
     width: 100%;
-    padding-top: 105px;
+    padding-top: 0px;
+
+  
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
     background-position: center center;
-    background-size: cover;
+    background-size: 100% 100%;
     -webkit-animation-delay: 0.15s;
     -moz-animation-delay: 0.15s;
     -o-animation-delay: 0.15s;
@@ -6123,7 +6128,7 @@ html.bg {
     background-image: url("../../images/bg4.png"); }
     @media (max-width: 991px) {
       #coming-soon  #cover-image {
-        padding-top: 65px; } }
+        padding-top: 00px; } }
     #coming-soon  #cover-image:after {
       content: '';
       position: absolute;
@@ -6135,7 +6140,7 @@ html.bg {
       background: rgba(24, 22, 19, 0.4); }
     #coming-soon #cover-image:before {
       position: absolute;
-      top: 10%;
+      top: 0%;
       bottom: 0;
       left: 0;
       right: 0;
