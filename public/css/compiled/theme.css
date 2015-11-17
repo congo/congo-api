@@ -6072,7 +6072,8 @@ html.bg {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#337ab7', endColorstr = '#337ab7', GradientType = 1); }
   #coming-soon.dark {
     border-top: 5px solid #337ab7;
-    background: #337ab7 !important; }
+    background-size: cover;
+ background-image: url("../../images/background.png") !important; }
     #coming-soon.dark .info a {
       color: #fff; }
     #coming-soon.dark .info h3 {
@@ -6105,6 +6106,45 @@ html.bg {
         border-color: #ddd; }
     #coming-soon.dark .social .ion span {
       color: #AEDCFF; }
+  #coming-soon #cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    width: 100%;
+    padding-top: 105px;
+    background-position: center center;
+    background-size: cover;
+    -webkit-animation-delay: 0.15s;
+    -moz-animation-delay: 0.15s;
+    -o-animation-delay: 0.15s;
+    -ms-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+    background-image: url("../../images/bg4.png"); }
+    @media (max-width: 991px) {
+      #coming-soon  #cover-image {
+        padding-top: 65px; } }
+    #coming-soon  #cover-image:after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      left: 0;
+      width: 100%;
+      top: 0;
+      background: rgba(24, 22, 19, 0.4); }
+    #coming-soon #cover-image:before {
+      position: absolute;
+      top: 10%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.25)));
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+      background: -moz-linear-gradient(top, transparent, rgba(0, 0, 0, 0.25));
+      background: -o-linear-gradient(top, transparent, rgba(0, 0, 0, 0.25));
+      background: linear-gradient(top, transparent, rgba(0, 0, 0, 0.25)); }
   #coming-soon .skins-nav {
     opacity: 1;
     -webkit-transition: left 0.3s;
