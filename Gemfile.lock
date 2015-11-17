@@ -272,6 +272,11 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     rake (10.4.2)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
@@ -384,6 +389,7 @@ DEPENDENCIES
   railroady
   rails!
   rails-erd
+  rails_12factor
   redis-namespace
   remote_syslog_logger
   rspec-rails
@@ -398,3 +404,6 @@ DEPENDENCIES
   stripe
   uglifier (>= 1.3.0)
   unindent
+
+BUNDLED WITH
+   1.10.6

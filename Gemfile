@@ -103,5 +103,9 @@ group :development, :test do
   gem 'faker'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.0'
 
